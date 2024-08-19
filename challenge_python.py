@@ -9,7 +9,6 @@ def get_s3_objects(bucket, prefix=''):
     next_token = None
     if prefix:
         kwargs['Prefix'] = prefix
-    object_list = []
     while True:
         if next_token:
             kwargs['ContinuationToken'] = next_token
